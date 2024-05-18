@@ -1,0 +1,363 @@
+en:
+# shared folder
+  shared:
+    navbar:
+      site_name: "Lectures Evaluation Platform"
+      reviews: "Reviews"
+      feedback: "Feedback"
+      account_settings: "Account Settings"
+      sittgins: "Settings"
+      sign_out: "Sign Out"
+      sign_in: "Sign In"
+      sign_up: "Join the Platform"
+      new_review: "New Review"
+      choose_language: "اختر اللغة"
+    head:
+      site_name: "Lectures Evaluation Platform"
+    footer:
+      author: "Mohammed Assiri"
+      instructions: "Instructions"
+      privacy: "Privacy"
+# home folder
+  home:
+    index:
+      welcom: "Welcome to the Lecture Feedback Platform"
+      about: "This platform is for students registered in the course and requires login to access other platform services"
+      new_reviews_button: "New Review"
+      reports_button: "Reports"
+      sign_in_button: "Sign In"
+      feedback_button: "Feedback"
+      sign_up_button: "Join the Platform"
+    privacy:
+      title: "Privacy Policy"
+      content: "This platform is for students to whom the registration link was sent by the course instructor"
+    terms:
+      title: "Help"
+      content: ".The instructions were shared via the Slack and Blackboard platforms, and if there are any inquiries, please contact the course instructor."
+# errors folder
+  error_page_main_title: "Error..."
+  error_page_error_joke: "The program is to blame"
+  error_title_not_found: "The page does not exist"
+  error_description_not_found: "The page you requested does not exist on the platform, but let us know what it is."
+  error_title_internal_server_error: "Server Error"
+  error_description_internal_server_error: "The server doesn't seem to like the situation, but let's see what happened."
+#reviews
+  reviews:
+    # controller
+    create:
+      was_sent: "Review Submitted Successfully"
+    update:
+      was_updated: "Feedback modified successfully"
+    destroy:
+      was_deleted: "Review Deleted Successfully"
+   # view
+    show:
+      title: "Provide Lecture Feedback"
+      edit_button: "Edit this feedback"
+      return_button: "Return to Reports"
+      delete_button: "Delete This Review"
+      confirm_delete: "Are you sure you want to delete this review?"
+    show_mark:
+      title: "Report on the number of reviews and grades"
+      all_sections: "All Sections"
+      selected_section: "Selected Section Evaluations"
+      student_name: "Student Name"
+      student_reviews: "Number of Reviews"
+      student_grade: "Score Score"
+    index:
+      title: "Latest Reviews"
+      swtich: "Change Section"
+      no_reviews: "The sum of all reviews"
+      section_id: "Section ID"
+      section_1: "1959"
+      section_2: "1975"
+      all_sections: "All Sections"
+      selected_section: "Selected Section Evaluations"
+      lecture_title: "Lecture Title"
+      explanation_level: "Explanation Rating"
+      lecture_value: "Lecture Information Rating"
+      easypoint: "the easiest point in the lecture"
+      hardpoint: "the hardest point of the lecture"
+      notes: "Notes"
+    new:
+      title: "Provide Lecture Feedback"
+      closed_deadline: "The form has been closed because the evaluation period has expired"
+      no_more: "You are not allowed to submit more reviews"
+      closed_last_submition: "You cannot submit more than one review per day"
+      edit_button: "Edit Last feedback"
+      return_button: "Return to Reports"
+    edit:
+      title: "Edit Lecture Feedback"
+      show_button: "View this review"
+      return_button: "Return to Reports"
+    review:
+      lecture_title: "Lecture Title"
+      explanation_level: "Lecture Explanation Rating"
+      lecture_value: "Lecture Information Rating"
+      easypoint: "The easiest point in today's lecture"
+      hardpoint: "The hardest point in today's lecture"
+      notes: "Other notes or suggestions"
+    form:
+      errors: "There are some errors preventing the evaluation from being submitted"
+      student_id: "University ID"
+      section_id: "Section ID"
+      lecture_title: "Lecture Title"
+      explanation_level: "Lecture Explanation Rating"
+      lecture_value: "Lecture Information Rating"
+      easypoint: "The easiest point in today's lecture"
+      hardpoint: "The hardest point in today's lecture"
+      notes: "Other notes or suggestions about the explanation, practical material, course, etc."
+      submit_button: "Submit feedback"
+# active record
+  attributes:
+    review:
+
+  activerecord:
+    errors:
+      messages:
+       record_invalid: 'Verification failed: %{errors}'
+       restrict_dependent_destroy:
+         has_one: The record cannot be deleted because there is a record that %{record} depends on.
+         has_many: The record cannot be deleted because %{record} has records that depend on it
+    attributes:
+      review:
+       title:
+         one: "Lecture Title"
+       easypoint:
+         one: "Easiest point in today's lecture"
+       hardpoint:
+         one: "The hardest point in today's lecture"
+      user:
+       first_name:
+         one: "first name"
+       last_name:
+         one: "last name"
+       section_id:
+         one: "Division Number"
+       password:
+         one: "Password"
+       password_confirmation:
+         one: "Confirm Password"
+       email:
+         one: "e-mail"
+       current_password:
+         one: "current password"
+# errors messages
+  errors:
+    format: "%{message} %{attribute}"
+    messages:
+      model_invalid: "Validation failed: %{errors}"
+      inclusion: "is not included in the list"
+      exclusion: "is reserved"
+      invalid: "is invalid"
+      confirmation: "doesn’t match %{attribute}"
+      accepted: "must be accepted"
+      empty: "can’t be empty"
+      blank: "can’t be blank"
+      present: "must be blank"
+      too_long:
+       one: "is too long (maximum is 1 character)"
+       other: "is too long (maximum is %{count} characters)"
+      password_too_long: "is too long"
+      too_short:
+       one: "is too short (minimum is 1 character)"
+       other: "is too short (minimum is %{count} characters)"
+      wrong_length:
+       one: "is the wrong length (should be 1 character)"
+       other: "is the wrong length (should be %{count} characters)"
+      not_a_number: "is not a number"
+      not_an_integer: "must be an integer"
+      greater_than: "must be greater than %{count}"
+      greater_than_or_equal_to: "must be greater than or equal to %{count}"
+      equal_to: "must be equal to %{count}"
+      less_than: "must be less than %{count}"
+      less_than_or_equal_to: "must be less than or equal to %{count}"
+      other_than: "must be other than %{count}"
+      in: "must be in %{count}"
+      odd: "must be odd"
+      even: "must be even"
+# basic settings
+  # date and time formats
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    # Used in date_select and datetime_select.
+    order:
+      - year
+      - month
+      - day
+
+  datetime:
+    distance_in_words:
+      about_x_hours:
+       one: about %{count} hour
+       other: about %{count} hours
+      about_x_months:
+       one: about %{count} month
+       other: about %{count} months
+      about_x_years:
+       one: about %{count} year
+       other: about %{count} years
+      almost_x_years:
+       one: almost %{count} year
+       other: almost %{count} years
+      half_a_minute: half a minute
+      less_than_x_seconds:
+       one: less than %{count} second
+       other: less than %{count} seconds
+      less_than_x_minutes:
+       one: less than a minute
+       other: less than %{count} minutes
+      over_x_years:
+       one: over %{count} year
+       other: over %{count} years
+      x_seconds:
+       one: "%{count} second"
+       other: "%{count} seconds"
+      x_minutes:
+       one: "%{count} minute"
+       other: "%{count} minutes"
+      x_days:
+       one: "%{count} day"
+       other: "%{count} days"
+      x_months:
+       one: "%{count} month"
+       other: "%{count} months"
+      x_years:
+       one: "%{count} year"
+       other: "%{count} years"
+    prompts:
+      second: Second
+      minute: Minute
+      hour: Hour
+      day: Day
+      month: Month
+      year: Year
+
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "am"
+    pm: "pm"
+  # Used in array.to_sentence.
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " and "
+      last_word_connector: ", and "
+  number:
+    # Used in NumberHelper.number_to_delimited()
+    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
+    format:
+      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
+      separator: "."
+      # Delimits thousands (e.g. 1,000,000 is a million) (always in groups of three)
+      delimiter: ","
+      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
+      precision: 3
+      # Determine how rounding is performed (see BigDecimal::mode)
+      round_mode: default
+      # If set to true, precision will mean the number of significant digits instead
+      # of the number of decimal digits (1234 with precision 2 becomes 1200, 1.23543 becomes 1.2)
+      significant: false
+      # If set, the zeros after the decimal separator will always be stripped (e.g.: 1.200 will be 1.2)
+      strip_insignificant_zeros: false
+
+    # Used in NumberHelper.number_to_currency()
+    currency:
+      format:
+       # Where is the currency sign? %u is the currency unit, %n is the number (default: $5.00)
+       format: "%u%n"
+       negative_format: "-%u%n"
+       unit: "$"
+       # These six are to override number.format and are optional
+       separator: "."
+       delimiter: ","
+       precision: 2
+       # round_mode:
+       significant: false
+       strip_insignificant_zeros: false
+
+    # Used in NumberHelper.number_to_percentage()
+    percentage:
+      format:
+       # These five are to override number.format and are optional
+       # separator:
+       delimiter: ""
+       # precision:
+       # significant: false
+       # strip_insignificant_zeros: false
+       format: "%n%"
+
+    # Used in NumberHelper.number_to_rounded()
+    precision:
+      format:
+       # These five are to override number.format and are optional
+       # separator:
+       delimiter: ""
+       # precision:
+       # significant: false
+       # strip_insignificant_zeros: false
+
+    # Used in NumberHelper.number_to_human_size() and NumberHelper.number_to_human()
+    human:
+      format:
+       # These six are to override number.format and are optional
+       # separator:
+       delimiter: ""
+       precision: 3
+       # round_mode:
+       significant: true
+       strip_insignificant_zeros: true
+      # Used in number_to_human_size()
+      storage_units:
+       # Storage units output formatting.
+       # %u is the storage unit, %n is the number (default: 2 MB)
+       format: "%n %u"
+       units:
+         byte:
+          one:   "Byte"
+          other: "Bytes"
+         kb: "KB"
+         mb: "MB"
+         gb: "GB"
+         tb: "TB"
+         pb: "PB"
+         eb: "EB"
+         zb: "ZB"
+      # Used in NumberHelper.number_to_human()
+      decimal_units:
+       format: "%n %u"
+       # Decimal units output formatting
+       # By default we will only quantify some of the exponents
+       # but the commented ones might be defined or overridden
+       # by the user.
+       units:
+         # femto: Quadrillionth
+         # pico: Trillionth
+         # nano: Billionth
+         # micro: Millionth
+         # mili: Thousandth
+         # centi: Hundredth
+         # deci: Tenth
+         unit: ""
+         # ten:
+         #   one: Ten
+         #   other: Tens
+         # hundred: Hundred
+         thousand: Thousand
+         million: Million
+         billion: Billion
+         trillion: Trillion
+         quadrillion: Quadrillion

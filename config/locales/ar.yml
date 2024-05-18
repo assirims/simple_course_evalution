@@ -1,0 +1,397 @@
+ar:
+# shared folder
+  shared:
+    navbar:
+      site_name: "منصة تقييم المحاضرات"
+      reviews: "  التقييمات"
+      feedback: "آخر المراجعات"
+      account_settings: "اعدادات الحساب"
+      sittgins: "اعدادات"
+      sign_out: "تسجيل الخروج"
+      sign_in: "تسجيل الدخول"
+      sign_up: "الانضمام للمنصة"
+      new_review: "تقييم جديد"
+      reports: "التقارير"
+      choose_language: "Choose Language"
+    head:
+      site_name: "منصة تقييم المحاضرات"
+    footer:
+      author: "Mohammed Assiri"
+      instructions: "التعليمات"
+      privacy: "الخصوصية"
+# home folder
+  home:
+    index:
+      welcom: "مرحبا في منصة تقييم المحاضرات"
+      about: "هذه المنصة خاصة بالطلاب المسجلين في المقرر وتتطلب تسجيل الدخول للوصول إلى خدمات المنصة الأخرى"
+      new_reviews_button: "تقييم جديد"
+      sign_in_button: "تسجيل الدخول"
+      feedback_button: "آخر المراجعات"
+      sign_up_button: "الانضمام للمنصة"
+    privacy:
+      title: "سياسة الخصوصية"
+      content: "هذا المنصة خاصة بالطلاب الذين تم ارسال رابط التسجيل لهم من قبل أستاذ المقرر"
+    terms:
+      title: "التعليمات"
+      content: ".تم مشاركة التعليمات عبر منصة السلاك والبلاكبورد، وعند وجود أي استفسارات فضلا التواصل مع أستاذ المقرر"
+# errors folder
+  error_page_main_title: "خطأ ..."
+  error_page_error_joke: "واللوم على البرنامج"
+  error_title_not_found: "الصفحة غير موجودة"
+  error_description_not_found: "الصفحة اللي طلبتها غير موجودة في المنصة، لكن بلغنا نشوف وش السالفة"
+  error_title_internal_server_error: "خطأ في الخادم"
+  error_description_internal_server_error: "الخادم شكله مو عاجبه الوضع، لكن بلغنا نشوف وش السالفة"
+# reviews
+  reviews:
+  # controller
+    create:
+      was_sent: "تم ارسال المراجعة بنجاح"
+    update:
+      was_updated: "تم تعديل المراجعة بنجاح"
+    destroy:
+      was_deleted: "تم حذف المراجعة بنجاح"
+  # view
+    show:
+      title: "تقديم تغذية راجعة عن المحاضرة"
+      edit_button: "تعديل هذه المراجعة"
+      return_button: "العودة للتقارير"
+      delete_button: "حذف هذه المراجعة"
+      confirm_delete: "هل انت متأكد من حذف هذه المراجعة؟"
+    index:
+      title: "آخر المراجعات"
+      swtich: "تغيير الشعبة"
+      no_reviews: "مجموع جميع التقييمات"
+      all_sections: "جميع الشعب"
+      selected_section: "تقييمات الشعبة المحددة"
+      lecture_title: "عنوان المحاضرة"
+      explanation_level: "تقييم الشرح"
+      lecture_value: "تقييم معلومات المحاضرة"
+      easypoint: "أسهل نقطة في المحاضرة "
+      hardpoint: "أصعب نقطة في المحاضرة "
+      notes: "ملاحظات"
+    new:
+      title: "تقديم تغذية راجعة عن المحاضرة"
+      closed_deadline: "تم اغلاق النموذج بسبب انتهاء المدة المحددة للتقييم"
+      no_more: "غير مسموح لك تقديم المزيد من التقييمات"
+      closed_last_submition: "لا يمكن تقديم أكثر من تقييم واحد في اليوم"
+      edit_button: "تعديل المراجعة الاخيرة"
+      return_button: "العودة للتقارير"
+    edit:
+      title: "تعديل تغذية راجعة عن المحاضرة"
+      show_button: "عرض هذه المراجعة"
+      return_button: "العودة للتقارير"
+    review:
+      lecture_title: "عنوان المحاضرة"
+      explanation_level: "تقييم شرح المحاضرة"
+      lecture_value: "تقييم معلومات المحاضرة"
+      easypoint: "أسهل نقطة في محاضرة اليوم"
+      hardpoint: "أصعب نقطة في محاضرة اليوم"
+      notes: "ملاحظات أخرى أو اقتراحات"
+    form:
+      errors: "هناك بعض الاخطاء تمنع ارسال التقييم"
+      lecture_title: "عنوان المحاضرة"
+      explanation_level: "تقييم شرح المحاضرة"
+      lecture_value: "تقييم معلومات المحاضرة"
+      easypoint: "أسهل نقطة في محاضرة اليوم"
+      hardpoint: "أصعب نقطة في محاضرة اليوم"
+      notes: "ملاحظات أخرى أو اقتراحات"
+      submit_button: "ارسال التقييم"
+# active record
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "يجب ادخال البريد الالكتروني"
+              invalid: "البريد الالكتروني غير صحيح"
+              taken: "البريد الالكتروني موجود مسبقاً"
+              required: "يجب ادخال البريد الالكتروني"
+      messages:
+        record_invalid: 'فشل التحقّق من: %{errors}'
+        restrict_dependent_destroy:
+          has_one: لا يمكن حذف السجل لوجود سجل يعتمد عليه %{record}
+          has_many: لا يمكن حذف السجل لوجود سجلات تعتمد عليه %{record}
+    attributes:
+      review:
+        title:
+          one: "عنوان المحاضرة"
+        easypoint:
+          one: "أسهل نقطة في محاضرة اليوم"
+        hardpoint:
+          one: "أصعب نقطة في محاضرة اليوم"
+      user:
+        first_name:
+          one: "اسمك الأول"
+        last_name:
+          one: "اسم العائلة"
+        password:
+          one: "كلمة المرور"
+        password_confirmation:
+          one: "تأكيد كلمة المرور"
+        email:
+          one: "البريد الالكتروني"
+        current_password:
+          one: "كلمة المرور الحالية"
+# errors messages
+  errors:
+    format: "%{message} %{attribute}"
+
+    messages:
+      model_invalid: "فشل التحقق: %{errors}"
+      inclusion: "غير مدرج في القائمة"
+      exclusion: "محجوز"
+      invalid: "غير صالح"
+      confirmation: "لا يطابق %{attribute}"
+      accepted: "يجب أن يكون مقبول"
+      empty: "لا يمكن أن يكون فارغا"
+      blank: "يجب الاجابة على السؤال: "
+      present: "يجب أن يكون فارغا"
+      too_long:
+        one: "طويل جدا (عنصر واحد على الأكثر)"
+        other: "طويل جدا (العدد الأقصى هو %{count})"
+      password_too_long: "طويل جدا "
+      too_short:
+        one: "قصير جدا (عنصر واحد على الأقل)"
+        other: "قصير جدا (الحد الأدنى هو %{count})"
+      wrong_length:
+        one: "عدد خاطئ من العناصر (يجب أن يكون عنصر واحد)"
+        other: "عدد خاطئ من العناصر (يجب أن يكون %{count} عناصر) حسب "
+      not_a_number: "ليس رقما"
+      not_an_integer: "ليس عددا صحيحا"
+      greater_than: "أكبر من %{count}"
+      greater_than_or_equal_to: "يجب أن يكون أكبر من أو يساوي %{count}"
+      equal_to: "يجب أن يساوي %{count}"
+      less_than: "يجب أن يكون أقل من  %{count}"
+      less_than_or_equal_to: "يجب أن يكون أقل من أو يساوي %{count}"
+      other_than: "يجب أن يكون قيمة غير %{count}"
+      in: "يجب أن يكون في  %{count}"
+      odd: "يجب أن يكون فردي"
+      even: "يجب أن يكون زوجي"
+# basic settings
+  # date and time formats
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
+    day_names: [الأحد, الاثنين, الثلاثاء, الأربعاء, الخميس, الجمعة, السبت]
+    abbr_day_names: [الأحد, الاثنين, الثلاثاء, الأربعاء, الخميس, الجمعة, السبت]
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, يناير, فبراير, مارس, أبريل, مايو, يونيو, يوليو, أغسطس, سبتمبر, أكتوبر, نوفمبر, ديسمبر]
+    abbr_month_names: [~, يناير, فبراير, مارس, أبريل, مايو, يونيو, يوليو, أغسطس, سبتمبر, أكتوبر, نوفمبر, ديسمبر]
+    # Used in date_select and datetime_select.
+    order:
+      - year
+      - month
+      - day
+
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        zero: حوالي صفر ساعات
+        one: حوالي ساعة واحدة
+        two: حوالي ساعتان
+        few: حوالي %{count} ساعات
+        many: حوالي %{count} ساعة
+        other: حوالي %{count} ساعة
+      about_x_months:
+        zero: حوالي صفر أشهر
+        one: حوالي شهر واحد
+        two: حوالي شهران
+        few: حوالي %{count} أشهر
+        many: حوالي %{count} شهر
+        other: حوالي %{count} شهر
+      about_x_years:
+        zero: حوالي صفر سنوات
+        one: حوالي سنة
+        two: حوالي سنتان
+        few: حوالي %{count} سنوات
+        many: حوالي %{count} سنة
+        other: حوالي %{count} سنة
+      almost_x_years:
+        zero: ما يقرب من صفر سنوات
+        one: تقريبا سنة واحدة
+        two: ما يقرب من سنتين
+        few: ما يقرب من %{count} سنوات
+        many: ما يقرب من %{count} سنة
+        other: ما يقرب من %{count} سنة
+      half_a_minute: نصف دقيقة
+      less_than_x_seconds:
+        zero: أقل من صفر ثواني
+        one: أقل من ثانية
+        two: أقل من ثانيتان
+        few: أقل من %{count} ثوان
+        many: أقل من %{count} ثانية
+        other: أقل من %{count} ثانية
+      less_than_x_minutes:
+        zero: أقل من صفر دقائق
+        one: أقل من دقيقة
+        two: أقل من دقيقتان
+        few: أقل من %{count} دقائق
+        many: أقل من %{count} دقيقة
+        other: أقل من %{count} دقيقة
+      over_x_years:
+        zero: أكثر من صفر سنوات
+        one: أكثر من سنة
+        two: أكثر من سنتين
+        few: أكثر من %{count} سنوات
+        many: أكثر من %{count} سنة
+        other: أكثر من %{count} سنة
+      x_seconds:
+        zero: صفر ثواني
+        one: ثانية واحدة
+        two: ثانيتان
+        few: "%{count} ثوان"
+        many: "%{count} ثانية"
+        other: "%{count} ثانية"
+      x_minutes:
+        zero: صفر دقائق
+        one: دقيقة واحدة
+        two: دقيقتان
+        few: "%{count} دقائق"
+        many: "%{count} دقيقة"
+        other: "%{count} دقيقة"
+      x_days:
+        zero: صفر أيام
+        one: يوم واحد
+        two: يومان
+        few: "%{count} أيام"
+        many: "%{count} يوم"
+        other: "%{count} يوم"
+      x_months:
+        zero: صفر أشهر
+        one: شهر واحد
+        two: شهران
+        few: "%{count} أشهر"
+        many: "%{count} شهر"
+        other: "%{count} شهر"
+    prompts:
+      second: ثانية
+      minute: دقيقة
+      hour: ساعة
+      day: اليوم
+      month: الشهر
+      year: السنة
+
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      short: "%d %b %H:%M"
+      long: "%B %d, %Y %H:%M"
+    am: "am"
+    pm: "pm"
+
+  # Used in array.to_sentence.
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " و "
+      last_word_connector: ", و "
+  number:
+    # Used in NumberHelper.number_to_delimited()
+    # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'
+    format:
+      # Sets the separator between the units, for more precision (e.g. 1.0 / 2.0 == 0.5)
+      separator: "."
+      # Delimits thousands (e.g. 1,000,000 is a million) (always in groups of three)
+      delimiter: ","
+      # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
+      precision: 3
+      # Determine how rounding is performed (see BigDecimal::mode)
+      round_mode: default
+      # If set to true, precision will mean the number of significant digits instead
+      # of the number of decimal digits (1234 with precision 2 becomes 1200, 1.23543 becomes 1.2)
+      significant: false
+      # If set, the zeros after the decimal separator will always be stripped (e.g.: 1.200 will be 1.2)
+      strip_insignificant_zeros: false
+
+    # Used in NumberHelper.number_to_currency()
+    currency:
+      format:
+        # Where is the currency sign? %u is the currency unit, %n is the number (default: $5.00)
+        format: "%u%n"
+        negative_format: "-%u%n"
+        unit: "$"
+        # These six are to override number.format and are optional
+        separator: "."
+        delimiter: ","
+        precision: 2
+        # round_mode:
+        significant: false
+        strip_insignificant_zeros: false
+
+    # Used in NumberHelper.number_to_percentage()
+    percentage:
+      format:
+        # These five are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        # precision:
+        # significant: false
+        # strip_insignificant_zeros: false
+        format: "%n%"
+
+    # Used in NumberHelper.number_to_rounded()
+    precision:
+      format:
+        # These five are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        # precision:
+        # significant: false
+        # strip_insignificant_zeros: false
+
+    # Used in NumberHelper.number_to_human_size() and NumberHelper.number_to_human()
+    human:
+      format:
+        # These six are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        precision: 3
+        # round_mode:
+        significant: true
+        strip_insignificant_zeros: true
+      # Used in number_to_human_size()
+      storage_units:
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+          pb: "PB"
+          eb: "EB"
+          zb: "ZB"
+      # Used in NumberHelper.number_to_human()
+      decimal_units:
+        format: "%n %u"
+        # Decimal units output formatting
+        # By default we will only quantify some of the exponents
+        # but the commented ones might be defined or overridden
+        # by the user.
+        units:
+          # femto: Quadrillionth
+          # pico: Trillionth
+          # nano: Billionth
+          # micro: Millionth
+          # mili: Thousandth
+          # centi: Hundredth
+          # deci: Tenth
+          unit: ""
+          # ten:
+          #   one: Ten
+          #   other: Tens
+          # hundred: Hundred
+          thousand: ألف
+          million: مليون
+          billion: بليون
+          trillion: ترليون
+          quadrillion: كوادريليون

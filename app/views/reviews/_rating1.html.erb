@@ -1,0 +1,27 @@
+<div class="rating-wrapper1", id="lecturelevel">
+  <%= form.radio_button :lecturelevel, 0, id: "star1-0", checked: true %>
+  <% 5.times do |i| %>
+    <%= form.radio_button :lecturelevel, i+1, id: "star1-#{i+1}" %>
+  <% end %>
+  <div class="rating-content1">
+    <div class="stars1">
+      <%= form.label :lecturelevel, '&nbsp;'.html_safe, for: "star1-0", class: "star1-0 fas fa-star fs-2" %>
+      <% 5.times do |i| %>
+        <%= form.label :lecturelevel, '&nbsp;'.html_safe, for: "star1-#{i+1}", class: "star1-#{i+1} fas fa-star fs-2" %>
+      <% end %>
+    </div>
+    <div class="rating-outer1">
+      <div class="emojis1">
+        <li class="slideImg1"><%= image_tag "moji-0.png", alt: "rating as of 0" %></li>
+        <% 5.times do |i| %>
+          <li><%= image_tag "moji-#{i+1}.png", alt: "rating as of #{i+1}" %></li>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="rating-footer1">
+    <span class="rating-text1"></span>
+    <span class="rating-numb1""></span>
+  </div>
+</div>

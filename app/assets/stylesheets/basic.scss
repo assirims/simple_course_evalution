@@ -1,0 +1,29 @@
+.gradient-custom { background: linear-gradient(40deg,#45cafc,#303f9f) !important }
+
+.clk{ text-decoration: none;  color: #fff;  border-bottom: 2px solid transparent;  transition: all 0.3s ease-in-out; }
+.clk:hover{ border-bottom: 2px solid #fff;}
+
+body {
+  background: rgb(69,202,252);
+  background: linear-gradient(40deg, rgba(69,202,252,0.2) 0%, rgba(48,63,159,0.2) 100%);
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("https://source.unsplash.com/Bd7gNnWJBkU/1920x1080");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bc { padding-top: 5%;  padding-bottom: calc(10rem - 4.5rem);}
+
+@media (max-width: 978px) { .bc { padding-top: 10%; padding-bottom: calc(10rem - 4.5rem); }}
+
+.form-floating.custom-class>label {
+  top: 0;
+  right: 0;
+  transform-origin: 100% 0;
+  transition: opacity .1s ease-in-out,transform .1s ease-in-out;
+}
+.form-floating.custom-class>.form-control-plaintext~label, .form-floating.custom-class>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
+  opacity: .65;
+  transform: scale(.85) translateY(-0.5rem) translateX(-0.15rem);
+}

@@ -1,0 +1,164 @@
+////////////////////////////////// start 1 /////////////////////////////////////////////////////////////////
+.rating-wrapper1 { max-width: 360px; width: 100%; margin: 0 auto; }
+.rating-wrapper1 input[type="radio"] { display: none; }
+.rating-wrapper1 .rating-content1 { padding: 30px; display: flex; align-items: center; flex-direction: column; }
+.rating-wrapper1 .rating-outer1 { height: 90px; width: 90px; margin-top: 20px; overflow: hidden;}
+.rating-outer1 .emojis1 { height: 500%; display: flex; flex-direction: column;}
+.rating-outer1 .emojis1 li { height: 20%; width: 100%; list-style: none; transition: all 0.3s ease;}
+.rating-outer1 li img { height: 100%;width: 100%; }
+
+.rating-wrapper1 .stars1 { margin-top: 30px; }
+.stars1 label { cursor: pointer; }
+
+.rating-wrapper1 .rating-footer1 { border-top: 1px solid #ccc; background: #f2f2f2; width: 100%; height: 55px;
+  padding: 0 20px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; }
+
+.rating-footer1 span { font-size: 17px; font-weight: 400; }
+.rating-footer1 .rating-text1::before { content: "لم يتم التقييم"; }
+.rating-footer1 .rating-numb1::before { content: "0 / 5"; }
+
+// ***********************************************************************
+#star1-1:checked~.rating-content1 .emojis1 .slideImg1 { margin-top: -90px; }
+#star1-2:checked~.rating-content1 .emojis1 .slideImg1 { margin-top: -180px; }
+#star1-3:checked~.rating-content1 .emojis1 .slideImg1 { margin-top: -270px; }
+#star1-4:checked~.rating-content1 .emojis1 .slideImg1 { margin-top: -360px; }
+#star1-5:checked~.rating-content1 .emojis1 .slideImg1 { margin-top: -450px; }
+
+#star1-0:hover~.rating-content1 .stars1 .star1-0,
+#star1-0:checked~.rating-content1 .stars1 .star1-0,
+#star1-1:hover~.rating-content1 .stars1 .star1-0,
+#star1-1:hover~.rating-content1 .stars1 .star1-1,
+#star1-1:checked~.rating-content1 .stars1 .star1-0,
+#star1-1:checked~.rating-content1 .stars1 .star1-1,
+#star1-2:hover~.rating-content1 .stars1 .star1-0,
+#star1-2:hover~.rating-content1 .stars1 .star1-1,
+#star1-2:hover~.rating-content1 .stars1 .star1-2,
+#star1-2:checked~.rating-content1 .stars1 .star1-0,
+#star1-2:checked~.rating-content1 .stars1 .star1-1,
+#star1-2:checked~.rating-content1 .stars1 .star1-2,
+#star1-3:hover~.rating-content1 .stars1 .star1-0,
+#star1-3:hover~.rating-content1 .stars1 .star1-1,
+#star1-3:hover~.rating-content1 .stars1 .star1-2,
+#star1-3:hover~.rating-content1 .stars1 .star1-3,
+#star1-3:checked~.rating-content1 .stars1 .star1-0,
+#star1-3:checked~.rating-content1 .stars1 .star1-1,
+#star1-3:checked~.rating-content1 .stars1 .star1-2,
+#star1-3:checked~.rating-content1 .stars1 .star1-3,
+#star1-4:hover~.rating-content1 .stars1 .star1-0,
+#star1-4:hover~.rating-content1 .stars1 .star1-1,
+#star1-4:hover~.rating-content1 .stars1 .star1-2,
+#star1-4:hover~.rating-content1 .stars1 .star1-3,
+#star1-4:hover~.rating-content1 .stars1 .star1-4,
+#star1-4:checked~.rating-content1 .stars1 .star1-0,
+#star1-4:checked~.rating-content1 .stars1 .star1-1,
+#star1-4:checked~.rating-content1 .stars1 .star1-2,
+#star1-4:checked~.rating-content1 .stars1 .star1-3,
+#star1-4:checked~.rating-content1 .stars1 .star1-4,
+#star1-5:hover~.rating-content1 .stars1 .star1-0,
+#star1-5:hover~.rating-content1 .stars1 .star1-1,
+#star1-5:hover~.rating-content1 .stars1 .star1-2,
+#star1-5:hover~.rating-content1 .stars1 .star1-3,
+#star1-5:hover~.rating-content1 .stars1 .star1-4,
+#star1-5:hover~.rating-content1 .stars1 .star1-5,
+#star1-5:checked~.rating-content1 .stars1 .star1-0,
+#star1-5:checked~.rating-content1 .stars1 .star1-1,
+#star1-5:checked~.rating-content1 .stars1 .star1-2,
+#star1-5:checked~.rating-content1 .stars1 .star1-3,
+#star1-5:checked~.rating-content1 .stars1 .star1-4,
+#star1-5:checked~.rating-content1 .stars1 .star1-5 { color: #fd4; }
+
+#star1-0:checked~.rating-footer1 .rating-text1::before { content: "لم يتم التقييم"; }
+#star1-0:checked~.rating-footer1 .rating-numb1::before { content: "0 / 5"; }
+#star1-1:checked~.rating-footer1 .rating-text1::before { content: "غير مفيد على الاطلاق"; }
+#star1-1:checked~.rating-footer1 .rating-numb1::before { content: "1 / 5"; }
+#star1-2:checked~.rating-footer1 .rating-text1::before { content: "غير مفيد تقريبا"; }
+#star1-2:checked~.rating-footer1 .rating-numb1::before { content: "2 / 5"; }
+#star1-3:checked~.rating-footer1 .rating-text1::before { content: "مفيد وغير مفيد في نفس الوقت"; }
+#star1-3:checked~.rating-footer1 .rating-numb1::before { content: "3 / 5"; }
+#star1-4:checked~.rating-footer1 .rating-text1::before { content: "مفيد نوعا ما"; }
+#star1-4:checked~.rating-footer1 .rating-numb1::before { content: "4 / 5"; }
+#star1-5:checked~.rating-footer1 .rating-text1::before { content: "مفيد للغاية"; }
+#star1-5:checked~.rating-footer1 .rating-numb1::before { content: "5 / 5"; }
+
+
+////////////////////////////////// start 2 /////////////////////////////////////////////////////////////////
+
+.rating-wrapper2 { max-width: 360px; width: 100%; margin: 0 auto; }
+.rating-wrapper2 input[type="radio"] { display: none; }
+.rating-wrapper2 .rating-content2 { padding: 30px; display: flex; align-items: center; flex-direction: column; }
+.rating-wrapper2 .rating-outer2 { height: 90px; width: 90px; margin-top: 20px; overflow: hidden;}
+.rating-outer2 .emojis2 { height: 500%; display: flex; flex-direction: column;}
+.rating-outer2 .emojis2 li { height: 20%; width: 100%; list-style: none; transition: all 0.3s ease;}
+.rating-outer2 li img { height: 100%;width: 100%; }
+
+.rating-wrapper2 .stars2 { margin-top: 30px; }
+.stars2 label { cursor: pointer; }
+
+.rating-wrapper2 .rating-footer2 { border-top: 1px solid #ccc; background: #f2f2f2; width: 100%; height: 55px;
+  padding: 0 20px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; }
+
+.rating-footer2 span { font-size: 17px; font-weight: 400; }
+.rating-footer2 .rating-text2::before { content: "لم يتم التقييم"; }
+.rating-footer2 .rating-numb2::before { content: "0 / 5"; }
+// *****************************************************************
+#star2-1:checked~.rating-content2 .emojis2 .slideImg2 { margin-top: -90px; }
+#star2-2:checked~.rating-content2 .emojis2 .slideImg2 { margin-top: -180px; }
+#star2-3:checked~.rating-content2 .emojis2 .slideImg2 { margin-top: -270px; }
+#star2-4:checked~.rating-content2 .emojis2 .slideImg2 { margin-top: -360px; }
+#star2-5:checked~.rating-content2 .emojis2 .slideImg2 { margin-top: -450px; }
+
+#star2-0:hover~.rating-content2 .stars2 .star2-0,
+#star2-0:checked~.rating-content2 .stars2 .star2-0,
+#star2-1:hover~.rating-content2 .stars2 .star2-0,
+#star2-1:hover~.rating-content2 .stars2 .star2-1,
+#star2-1:checked~.rating-content2 .stars2 .star2-0,
+#star2-1:checked~.rating-content2 .stars2 .star2-1,
+#star2-2:hover~.rating-content2 .stars2 .star2-0,
+#star2-2:hover~.rating-content2 .stars2 .star2-1,
+#star2-2:hover~.rating-content2 .stars2 .star2-2,
+#star2-2:checked~.rating-content2 .stars2 .star2-0,
+#star2-2:checked~.rating-content2 .stars2 .star2-1,
+#star2-2:checked~.rating-content2 .stars2 .star2-2,
+#star2-3:hover~.rating-content2 .stars2 .star2-0,
+#star2-3:hover~.rating-content2 .stars2 .star2-1,
+#star2-3:hover~.rating-content2 .stars2 .star2-2,
+#star2-3:hover~.rating-content2 .stars2 .star2-3,
+#star2-3:checked~.rating-content2 .stars2 .star2-0,
+#star2-3:checked~.rating-content2 .stars2 .star2-1,
+#star2-3:checked~.rating-content2 .stars2 .star2-2,
+#star2-3:checked~.rating-content2 .stars2 .star2-3,
+#star2-4:hover~.rating-content2 .stars2 .star2-0,
+#star2-4:hover~.rating-content2 .stars2 .star2-1,
+#star2-4:hover~.rating-content2 .stars2 .star2-2,
+#star2-4:hover~.rating-content2 .stars2 .star2-3,
+#star2-4:hover~.rating-content2 .stars2 .star2-4,
+#star2-4:checked~.rating-content2 .stars2 .star2-0,
+#star2-4:checked~.rating-content2 .stars2 .star2-1,
+#star2-4:checked~.rating-content2 .stars2 .star2-2,
+#star2-4:checked~.rating-content2 .stars2 .star2-3,
+#star2-4:checked~.rating-content2 .stars2 .star2-4,
+#star2-5:hover~.rating-content2 .stars2 .star2-0,
+#star2-5:hover~.rating-content2 .stars2 .star2-1,
+#star2-5:hover~.rating-content2 .stars2 .star2-2,
+#star2-5:hover~.rating-content2 .stars2 .star2-3,
+#star2-5:hover~.rating-content2 .stars2 .star2-4,
+#star2-5:hover~.rating-content2 .stars2 .star2-5,
+#star2-5:checked~.rating-content2 .stars2 .star2-0,
+#star2-5:checked~.rating-content2 .stars2 .star2-1,
+#star2-5:checked~.rating-content2 .stars2 .star2-2,
+#star2-5:checked~.rating-content2 .stars2 .star2-3,
+#star2-5:checked~.rating-content2 .stars2 .star2-4,
+#star2-5:checked~.rating-content2 .stars2 .star2-5 { color: #fd4; }
+
+#star2-0:checked~.rating-footer2 .rating-text2::before { content: "لم يتم التقييم"; }
+#star2-0:checked~.rating-footer2 .rating-numb2::before { content: "0 / 5"; }
+#star2-1:checked~.rating-footer2 .rating-text2::before { content: "غير مفيد على الاطلاق"; }
+#star2-1:checked~.rating-footer2 .rating-numb2::before { content: "1 / 5"; }
+#star2-2:checked~.rating-footer2 .rating-text2::before { content: "غير مفيد تقريبا"; }
+#star2-2:checked~.rating-footer2 .rating-numb2::before { content: "2 / 5"; }
+#star2-3:checked~.rating-footer2 .rating-text2::before { content: "مفيد وغير مفيد في نفس الوقت"; }
+#star2-3:checked~.rating-footer2 .rating-numb2::before { content: "3 / 5"; }
+#star2-4:checked~.rating-footer2 .rating-text2::before { content: "مفيد نوعا ما"; }
+#star2-4:checked~.rating-footer2 .rating-numb2::before { content: "4 / 5"; }
+#star2-5:checked~.rating-footer2 .rating-text2::before { content: "مفيد للغاية"; }
+#star2-5:checked~.rating-footer2 .rating-numb2::before { content: "5 / 5"; }

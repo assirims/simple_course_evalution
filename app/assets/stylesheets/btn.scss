@@ -1,0 +1,74 @@
+.btn {
+    border: 1px solid rgba(223,190,106,0.3);
+    box-shadow: 0 2px 19px -2px rgba(255, 255, 255, 0.331);
+}
+
+.btn:hover {
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 3px 11px -2px rgba(255, 255, 255, 0.807);
+}
+
+.bttn-blue {
+    display:inline-block;
+    background: transparent;
+    color: #fff;
+    border-radius: 0;
+    padding: 18px 80px 20px;
+    transition: all 0.7s ease-out;
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
+    font-weight: bold;
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    text-decoration: none;
+    margin: 0.625rem;
+    border: none;
+    border: 1px solid rgba(223,190,106,0.3);
+    box-shadow: 0 2px 19px -2px rgba(255, 255, 255, 0.331);
+    width: 300px;
+}
+
+.bttn-blue:hover {
+    color: #fff;
+    border: 1px solid rgba(223,190,106,0);
+    font-weight: bolder;
+    background-position: right center;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 3px 11px -2px rgba(255, 255, 255, 0.807);
+}
+
+.bttn-blue-sm {
+    display:inline-block;
+    background: transparent;
+    color: #fff;
+    border-radius: 0;
+    padding: 8px 30px 10px;
+    transition: all 0.7s ease-out;
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
+    font-weight: bold;
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    text-decoration: none;
+    margin: 0.625rem;
+    border: none;
+    border: 1px solid rgba(223,190,106,0.3);
+    box-shadow: 0 2px 19px -2px rgba(255, 255, 255, 0.331);
+    width: 200px;
+}
+
+.bttn-blue-sm:hover {
+    color: #fff;
+    border: 1px solid rgba(223,190,106,0);
+    font-weight: bolder;
+    background-position: right center;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 3px 11px -2px rgba(255, 255, 255, 0.807);
+}
+
+.btn-light-moon {
+  background: #FFEFBA;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #000;
+  border: 3px solid #eee;
+  border-radius: 35px;
+}

@@ -1,0 +1,54 @@
+<%= form_with(model: review) do |form| %>
+  <% if review.errors.any? %>
+    <div style="color: red">
+      <h2><%= t '.errors' %>:</h2>
+
+      <ul>
+        <% review.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <hr />
+
+  <div class="form-floating mb-4 custom-class" dir="rtl">
+    <%= form.text_field :title, autofocus: false, class: 'form-control', placeholder: (t '.lecture_title'), id: 'floatingInput' %>
+    <%= form.label :title, t('.lecture_title'), class: 'form-label', for: 'floatingInput' %>
+  </div>
+  <hr />
+  <div class="mb-4", id="lecturelevel">
+    <%= form.label :lecturelevel, (t '.explanation_level') %>
+    <%= render "reviews/rating1", form: form %>
+  </div>
+  <hr />
+  <div class="mb-4", id="valuelevel">
+    <%= form.label :valuelevel, (t '.lecture_value') %>
+    <%= render "reviews/rating2", form: form %>
+  </div>
+  <hr />
+
+  <div class="form-floating mb-4 custom-class" dir="rtl">
+    <%= form.text_area :easypoint, autofocus: false, class: 'form-control', placeholder: (t '.easypoint'), id: 'floatingInput' %>
+    <%= form.label :easypoint, t('.easypoint'), class: 'form-label', for: 'floatingInput' %>
+  </div>
+
+  <div class="form-floating mb-4 custom-class" dir="rtl">
+    <%= form.text_area :hardpoint, autofocus: false, class: 'form-control', placeholder: (t '.hardpoint'), id: 'floatingInput' %>
+    <%= form.label :hardpoint, t('.hardpoint'), class: 'form-label', for: 'floatingInput' %>
+  </div>
+
+  <div class="form-floating mb-4 custom-class" dir="rtl">
+    <%= form.text_area :notes, autofocus: false, class: 'form-control', placeholder: (t '.notes'), id: 'floatingInput' %>
+    <%= form.label :notes, t('.notes'), class: 'form-label', for: 'floatingInput' %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.hidden_field :user_id, value: current_user.id %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.submit (t '.submit_button'), class: "btn btn-primary" %>
+  </div>
+<% end %>

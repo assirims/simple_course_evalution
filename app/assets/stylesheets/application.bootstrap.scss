@@ -1,0 +1,10 @@
+// bundle exec rake assets:precompile
+
+@import 'basic.scss';
+@import 'rating.scss';
+@import 'btn.scss';
+
+@import 'actiontext.css';
+@import "trix/dist/trix";
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';

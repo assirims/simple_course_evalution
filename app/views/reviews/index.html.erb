@@ -1,0 +1,60 @@
+<div class="card">
+  <div class="card-body py-5 px-md-5">
+    <h1 class="text-center mb-4"><%= t '.title' %></h1>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="row mb-4 mt-4">
+          <div class="col text-start">
+            <%= t '.no_reviews' %>
+          </div>
+          <div class="col text-end">
+            <span class="badge bg-success">
+              <%= @reviews_total %>
+            </span></div>
+          <div class="col text-start">
+            <%= t '.section_id' %>
+          </div>
+          <div class="col text-end">
+            <%= t '.all_sections' %>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col"><%= t '.lecture_title' %></th>
+                <th scope="col"><%= t '.easypoint' %></th>
+                <th scope="col"><%= t '.hardpoint' %></th>
+                <th scope="col"><%= t '.notes' %></th>
+                <% if user_signed_in? %>
+                  <th scope="col"><%= t '.explanation_level' %></th>
+                <% end %>
+                <% if user_signed_in? %>
+                  <th scope="col"><%= t '.lecture_value' %></th>
+                <% end %>
+              </tr>
+            </thead>
+            <tbody>
+              <% @reviews.each do |review| %>
+                <tr>
+                  <td><%= review.title %></td>
+                  <td><%= review.easypoint %></td>
+                  <td><%= review.hardpoint %></td>
+                  <td><%= review.notes %></td>
+                  <td><%= review.lecturelevel  if user_signed_in?%></td>
+                  <td><%= review.valuelevel if user_signed_in? %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col-md-6">
+            <%== pagy_bootstrap_nav(@pagy) if @pagy.pages > 1 %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

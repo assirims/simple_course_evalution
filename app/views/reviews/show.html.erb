@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-body py-5 px-md-5">
+    <h1 class="text-center mb-4"><%= t '.title' %></h1>
+
+    <div class="card">
+      <div class="card-body">
+
+        <%= render @review %>
+
+        <div>
+          <%= link_to (t '.edit_button'), edit_review_path(@review), class: "btn btn-primary mb-4" %>
+
+          <%= link_to (t '.return_button'), reviews_path, class: "btn btn-secondary mb-4" %>
+
+          <%= button_to (t '.delete_button'), @review, method: :delete, data: { turbo_confirm: (t '.confirm_delete') }, class: "btn btn-danger" %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

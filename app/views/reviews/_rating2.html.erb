@@ -1,0 +1,27 @@
+<div class="rating-wrapper2", id="valuelevel">
+  <%= form.radio_button :valuelevel, 0, id: "star2-0", checked: true %>
+  <% 5.times do |i| %>
+    <%= form.radio_button :valuelevel, i+1, id: "star2-#{i+1}" %>
+  <% end %>
+  <div class="rating-content2">
+    <div class="stars2">
+      <%= form.label :valuelevel, '&nbsp;'.html_safe, for: "star2-0", class: "star2-0 fas fa-star fs-2" %>
+      <% 5.times do |i| %>
+        <%= form.label :valuelevel, '&nbsp;'.html_safe, for: "star2-#{i+1}", class: "star2-#{i+1} fas fa-star fs-2" %>
+      <% end %>
+    </div>
+    <div class="rating-outer2">
+      <div class="emojis2">
+        <li class="slideImg2"><%= image_tag "moji-0.png", alt: "rating as of 0" %></li>
+        <% 5.times do |i| %>
+          <li><%= image_tag "moji-#{i+1}.png", alt: "rating as of #{i+1}" %></li>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="rating-footer2">
+    <span class="rating-text2"></span>
+    <span class="rating-numb2"></span>
+  </div>
+</div>

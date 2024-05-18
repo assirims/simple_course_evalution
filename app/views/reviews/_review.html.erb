@@ -1,0 +1,42 @@
+<div id="<%= dom_id review %>">
+  <p>
+    <strong><%= t '.lecture_title' %>:</strong>
+    <input type="text" value="<%= review.title %>" readonly>
+  </p>
+
+  <p>
+    <strong><%= t '.explanation_level' %>:</strong>
+    <input type="text" value="<%= review.lecturelevel %>" readonly style='width:2em' >
+    / 5
+  </p>
+
+  <p>
+    <strong><%= t '.lecture_value' %>:</strong>
+    <input type="text" value="<%= review.valuelevel %>" readonly style='width:2em' >
+    /5
+  </p>
+
+  <p>
+    <strong><%= t '.easypoint' %></strong>
+    <br />
+    <textarea rows="4" cols="50" readonly class="form-control">
+        <%= review.easypoint %>
+      </textarea>
+  </p>
+
+  <p>
+    <strong><%= t '.hardpoint' %></strong>
+    <br />
+    <textarea rows="4" cols="50" readonly class="form-control">
+        <%= review.hardpoint %>
+      </textarea>
+  </p>
+
+  <p>
+    <strong><%= t '.notes' %></strong>
+    <br />
+    <textarea rows="4" cols="50" readonly class="form-control">
+    <%= review.notes %>
+    </textarea>
+  </p>
+</div>

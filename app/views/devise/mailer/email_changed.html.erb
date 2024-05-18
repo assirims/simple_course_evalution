@@ -1,0 +1,7 @@
+<p><%= t('.title')%> <%= @email %>!</p>
+
+<% if @resource.try(:unconfirmed_email?) %>
+	  <p><%= t('.content') %> <%= @resource.unconfirmed_email %>.</p>
+<% else %>
+	<p><%= t('.content') %> <%= @resource.email %>.</p>
+<% end %>

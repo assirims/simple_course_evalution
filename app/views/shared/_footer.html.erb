@@ -1,0 +1,9 @@
+<footer class="bg-light footer mt-auto py-3 gradient-custom">
+  <div class="container d-flex justify-content-between mx-auto text-light">
+    <span> <%= Date.today.year %> &copy; <a class="text-light clk" href="https://assirims.github.io/assirims/"><%= t '.author' %></a></span>
+    <ul class="d-inline float-end list-inline mb-0">
+      <li class="list-inline-item mr-4"><%= link_to (t '.instructions'), terms_path, class: "text-light clk" %></li>
+      <li class="list-inline-item mr-4 pe-4"><%= link_to (t '.privacy'), privacy_path, class: "text-light clk" %></li>
+    </ul>
+  </div>
+</footer>

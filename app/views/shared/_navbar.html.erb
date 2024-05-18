@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-light gradient-custom">
+  <div class="container mx-auto">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <i class="fa fa-marker ms-2"></i>
+      <%= t '.site_name' %>
+    <% end %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav me-auto mt-2 mt-md-0">
+      </ul>
+
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item mt-2 ms-4"><%= link_to new_review_path, class: "btn btn-sm btn-outline-dark text-white clk font-bold" do %>
+              <%= t '.new_review' %>
+              <i class="fa fa-commenting me-1"></i>
+            <% end %>
+          </li>
+          <li class="nav-item mt-2 ms-4"><%= link_to reviews_path, class: "btn btn-sm btn-outline-dark text-white clk font-bold" do %>
+              <%= t '.reports' %>
+              <i class="fa fa-tasks me-1"></i>
+            <% end %>
+          </li>
+        <% end %>
+
+        <% if I18n.locale == :en && !user_signed_in? %>
+          <li class="nav-item mt-2 ms-4"><%= link_to root_path(locale: :ar), class: "btn btn-sm btn-outline-dark text-white clk font-bold", onclick: "window.location.href=this" do %>
+              عربي
+              <i class="fa fa-language me-1"></i>
+            <% end %>
+          </li>
+        <% end %>
+        <% if I18n.locale == :ar && !user_signed_in? %>
+          <li class="nav-item mt-2 ms-4"><%= link_to root_path(locale: :en), class: "btn btn-sm btn-outline-dark text-white clk font-bold", onclick: "window.location.href=this" do %>
+              English
+              <i class="fa fa-language me-1"></i>
+            <% end %>
+          </li>
+        <% end %>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item dropdown">
+          <%= link_to "#", id: "navbar-dropdown", class: "nav-link dropdown-toggle", data: { target: "nav-account-dropdown", bs_toggle: "dropdown" }, aria: { haspopup: true, expanded: false } do %>
+            <%= t '.account_settings' %>
+            <i class="fa fa-cogs me-1"></i>
+          <% end %>
+          <div id="nav-account-dropdown" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbar-dropdown">
+            <%= link_to edit_user_registration_path, class: "dropdown-item" do %>
+              <%= t '.sittgins' %>
+              <i class="fa fa-cog me-1"></i>
+            <% end %>
+            <div class="dropdown-divider"></div>
+            <% if I18n.locale == :en %>
+              <%= link_to root_path(locale: :ar), class: "dropdown-item", onclick: "window.location.href=this" do %>
+                عربي
+                <i class="fa fa-language me-1"></i>
+              <% end %>
+            <% end %>
+            <% if I18n.locale == :ar  %>
+              <%= link_to root_path(locale: :en), class: "dropdown-item", onclick: "window.location.href=this" do %>
+                English
+                <i class="fa fa-language me-1"></i>
+              <% end %>
+            <% end %>
+            <div class="dropdown-divider"></div>
+            <%= button_to destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
+              <%= t '.sign_out' %>
+              <i class="fa fa-times-circle me-1"></i>
+            <% end %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item mt-2 ms-4"><%= link_to new_user_registration_path, class: "btn btn-sm btn-outline-dark text-white clk font-bold" do %>
+            <%= t '.sign_up' %>
+            <i class="fa-solid fa-plus me-1"></i>
+          <% end %>
+        </li>
+        <li class="nav-item mt-2"><%= link_to new_user_session_path, class: "btn btn-sm btn-outline-dark text-white clk font-bold" do %>
+            <%= t '.sign_in' %>
+            <i class="fa-solid fa-right-to-bracket me-1"></i>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+</nav>
