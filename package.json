@@ -16,7 +16,7 @@
     "esbuild-rails": "^1.0.7",
     "local-time": "^2.1.0",
     "sass": "^1.68.0",
-    "trix": "^2.0.6"
+    "trix": "^2.1.4"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
