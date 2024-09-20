@@ -160,7 +160,7 @@ GEM
     psych (5.1.2)
       stringio
     public_suffix (5.0.5)
-    puma (6.4.2)
+    puma (6.4.3)
       nio4r (~> 2.0)
     racc (1.8.0)
     rack (2.2.9)
@@ -273,7 +273,7 @@ DEPENDENCIES
   name_of_person (~> 1.1)
   pagy (~> 6.0)
   pg (~> 1.1)
-  puma (~> 6.2)
+  puma (~> 6.4)
   rails (~> 7.0.4, >= 7.0.4.3)
   selenium-webdriver
   smart_assets (~> 0.5.0)
